@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>iFrame Tester</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #ccc;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>iFrame Tester</h1>
+  <p>Enter a URL to load it in the iFrame below:</p>
+
+  <input type="text" id="urlInput" placeholder="https://example.com" />
+  <button onclick="loadIframe()">Load</button>
+
+  <iframe id="iframePreview" src=""></iframe>
+
+  <script>
+    function loadIframe() {
+      const url = document.getElementById('urlInput').value;
+      document.getElementById('iframePreview').src = url;
+    }
+  </script>
+
+</body>
+
+</html>
